@@ -23,6 +23,7 @@ public class BullerCreator : MonoBehaviour
 
             GameObject projectil = Instantiate(projectilPrefabRef, transform.position, Quaternion.identity);
 
+            //Esta es la manera de poder hacer referencia a la componente.
             projectil.GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
 
             Destroy(projectil, 5.0f);
